@@ -199,5 +199,189 @@
 			extraInfo:,
 			id:"1356161"
 		},
+		{
+	name:"Granada",
+	neighborhood:"East Dallas",
+	parking:["street", "lot", "valet"],
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"11334",
+
+		},
+	name:"Sundown at Granada",
+	neighborhood:"East Dallas",
+	parking:["street", "lot", "valet"],
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"1773188",
+	},
+	{
+	name:"The Green Elephant",
+	neighborhood:"East Dallas",
+	parking:"street",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"103402",
+	},
+	{
+	name:"Balcony Club",
+	neighborhood:"East Dallas";
+	parking:"lot",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"314721",
+	},
+	{
+	name:"Single Wide",
+	neighborhood:"East Dallas",
+	parking:["street", "lot", "valet"]
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"1552943"
+	},
+	{
+	name:"The Goat",
+	neighborhood:"East Dallas",
+	parking:"lot",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"1203686",
+	},
+	{
+	name:"Post Time",
+	neighborhood:"East Dallas",
+	parking:
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"2008879",
+	},
+
+	{
+	name:"White Rock Coffee",
+	neighborhood:"East Dallas",
+	parking:"lot",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"776731",
+	},
+
+	{
+	name:"Majestic Theatre",
+	id:""
+	neighborhood:"Downtown & Uptown",
+	parking:["street", "lot", "valet"],
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"498771",
+	}
+	{
+	name:"Panopticon",
+	neighborhood:"Downtown & Uptown",
+	parking:
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"3570824",
+	},
+	{
+	name:"City Tavern",
+	neighborhood:"Downtown & Uptown",
+	parking:"street",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"618756",
+	},
+	{
+	name:"One Eyed Penguin",
+	neighborhood:"Downtown & Uptown",
+	parking:"street",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"",
+	},
+	{
+	name:"House of Blues",
+	neighborhood:"Downtown & Uptown",
+	parking:["street", "lot", "valet"],
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"36239",
+	},
+	{
+	name:"Nickle and Rye",
+	neighborhood:"Downtown & Uptown",
+	parking:
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:""
+	},
+	{
+	name:"Rustic",
+	neighborhood:"Downtown & Uptown",
+	parking:
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"2453599",
+	},
+	{
+	name:"Foundry",
+	neighborhood:"Downtown & Uptown",
+	parking:"lot",
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"1773198",
+	},
+	{
+	name:"Stereo Live",
+	neighborhood:"Downtown & Uptown",
+	parking:
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"",
+	},
+	{
+	name:"Gas Monkey",
+	neighborhood:"Downtown & Uptown",
+	parking:["valet","lot"]
+	tixCost:
+	drinkCost:
+	cleanliness:
+	extraInfo:
+	id:"2424769",
+	},
+
 
 	]
