@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	// FIREBASE INITIALIZE
 	var config = {
 	    apiKey: "AIzaSyBDm5nT9v8GJXej3TZwLHfkgt55HGXwOYA",
 	    authDomain: "dfw-music.firebaseapp.com",
@@ -78,7 +78,7 @@ $(document).ready(function(){
 	});	
 
 
-		
+	// CREATE NEW ACCOUNT 
 	$("#submitAcct").on("click",function(){
   		event.preventDefault();
   		var createEmail = $("#createEmail").val().trim();
@@ -109,7 +109,7 @@ $(document).ready(function(){
   	});
 
 
-
+	// SONG KICK API
 	function shows(){
 		var id = "498771";
 		var queryURL = "http://api.songkick.com/api/3.0/venues/"+id+".json?apikey=ENjLM092JqaXsW2i";

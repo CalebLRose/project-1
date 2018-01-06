@@ -41,17 +41,14 @@ body{
 	color: #383838;
 	font-size: 1.2rem;
 }
-#myNav{
+.myNav{
 	background-color: #000;
 	height: 80px;
 	opacity: .8;
 }
-#speaker{
+.speakerIcon{
 	height: 30px;
 	widows: 31px;
-}
-#pageLinks{
-	color: color: #383838;
 }
 #headerDiv{
 	height: 650px;
