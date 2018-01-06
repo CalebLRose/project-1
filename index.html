@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title></title>
+	<title>Local Live</title>
 	<meta charset="utf-8">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -11,30 +11,38 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 	<script type="text/javascript" src="assets/javascript/data.js"></script>
 	<script type="text/javascript" src="assets/javascript/project.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Amiko:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand nav-link" href="#">Dallas Live<span class="sr-only">(current)</span></a>
+<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-lg fixed-top" id="myNav">
+		<a class="navbar-brand nav-link" href="index.html"><img id="speaker" src="assets/images/speaker.png"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expand="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" href="user.html" style="display: none">User</a>
+					<a class="nav-link text-white" id="userNav" href="user.html" style="display: none"></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Featured Shows</a>
+					<a class="nav-link text-secondary" href="#">Featured Shows</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Neighborhoods</a>
+					<a class="nav-link text-secondary" href="#">Neighborhoods</a>
 				</li>
 			</ul>
 			<button type="button" class="btn btn-sm btn-outline-light nav-item my-2 my-sm-0" data-toggle="modal" data-target="#signInModal" id="signBtn">Sign In | Create an Account</button>
+			<button type="submit" class="btn btn-sm btn-outline-light nav-item my-2 my-sm-0" id="outBtn" style="display: none">Sign Out</button>
 		</div>
 	</nav>
-		
+
+<!-- SIGN IN MODAL  -->
 	<div id="signInModal" class="modal fade" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -60,16 +68,83 @@
 						</form>
 					</div>
 					<div>
-						<button type="button" class="btn btn-default" id="googleAuth">Sign in with Google</button>
+						<button type="button" class="btn btn-default googleAuth">Sign in with Google</button>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<a href="createAcct.html">Create an Account</a>
-					<button type="submit" class="btn btn-default" data-dismiss="modal">Sign In</button>
+					<button type="button" class="btn btn-sm btn-outline-light nav-item my-2 my-sm-0" data-toggle="modal" data-target="#createAcctModal" data-dismiss="modal" id="createLinkBtn">Create an Account</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal" id="signInBtn">Sign In</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+<!-- CREATE ACCOUNT MODAL -->
+	<div id="createAcctModal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Create an Account</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div id="createAcctForm">
+						<form class="form-signin">
+							<label for="userName" class="sr-only">User Name</label>
+							<input type="text" id="createUsername" class="form-control" placeholder="username" required autofocus>
+							<br>
+							<label for="userEmail" class="sr-only">Email Address</label>
+							<input type="email" id="createEmail" class="form-control" placeholder="Email Address" required autofocus>
+							<br>
+							<label for="userPassword" class="sr-only">Password</label>
+							<input type="password" id="createPassword" class="form-control" placeholder="Password" required>
+						</form>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default googleAuth">Sign in with Google</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-default" data-dismiss="modal" id="submitAcct">Create an Account</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- TITLE DIV -->
+	<div class="container-fluid" id="headerDiv">
+		<div id="headerText">
+			<div id="textDiv">
+				
+				<h1 class="title" id="titleLocal">LOCAL</h1>
+				<h1 class="title" id="titleLive">LIVE</h1>
+				<div>
+					<h3 id="subTitle">A guide to Dallas' smaller music venues.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- FEATURED SHOWS -->
+	<div class="container-fluid" id="featured shows">
+		<div class="row">
+			<div class="col-6" id="deepEllum">
+			
+			</div>
+			<div class="col-6" id="southD">
+			
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6" id="downtown">
+			
+			</div>
+			<div class="col-6" id="eastD">
+			
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>
