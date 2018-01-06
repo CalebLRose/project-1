@@ -80,3 +80,165 @@ body{
 	margin-left: 10px;
 	font-size: 2.7rem;
 }
+
+
+/*User Page*/
+h1{
+   font-family:"DINNextW01-CondensedReg";
+    color: #fff;
+    font-size: 8rem;
+    letter-spacing: .5rem;
+
+}
+
+
+.container-fluid{
+    background-color: black;
+    width:100%;
+    height: 100%;
+}
+.object{
+    height:80%;
+    width:100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background
+    padding: 0;
+    margin:0;
+
+}
+.user-top{
+    background-image: url("../images/topImage.jpg");
+}
+
+.user-band{
+    background-image: url("../images/band.jpg");
+    width: 100%;
+}
+
+.user-venue{
+    background-image: url("../images/trees.jpg");
+    width:100%;
+}
+
+
+.col-xs-12{
+    margin-bottom: 150px;
+    width: 100%;
+    height:300px;
+    background-color: #383838;
+}
+
+.pic-holder{
+    margin-top: 41px;
+    margin-left: 25px;
+    width:250px;
+    height: 300px;
+    background-color:#383838; 
+}
+.user-name{
+    font-size: 60px;
+    padding:10px;
+    color:white;
+    margin-top:41px;
+    float: left;
+    width: 450px;
+    height: 200px;
+    background-color:#2b8ba3; 
+}
+.navbar{
+    width: 100%;
+    top:0;
+    position:fixed;
+}
+.user-cat-title{
+    font-family:"DINNextW01-CondensedReg";
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: .3rem;
+}
+.band-slot{
+    display: inline-block;
+    padding:10px;
+    width:200px;
+    height: 100%;
+    color:white;
+}
+.venue-slot{
+    display: inline-block;
+    padding:10px;
+    width:200px;
+    height: 100%;
+    color:white;
+}
+.footer{
+    text-align: center;
+    width:100%;
+    height: 35px;
+    background-color:black;
+    
+}
+.nav-link{
+    color:#2b8ba3;
+}
+
+/*Venue Page*/
+
+#venue-top-pic{
+    
+    width:100%;
+    height: 300px;
+    background-image: url(../images/kessler.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#venue-top-block{
+    padding-top:75px;
+    margin-left: 10px;
+    width:400px;
+    height: 400px;
+    background-color:#2b8ba3; 
+}
+
+#venue-type{
+    padding-top:40px; 
+    text-align: center;
+    
+}
+
+
+.venue-neighborhood{
+    text-align: center;
+    margin:10px;
+    width: 100%;
+    height: 500px;
+    color:white;
+    background-color: #383838;
+
+}
+
+.col-md-3{
+    margin:10px;
+    text-align: center;
+    display: inline-block;
+}
+#hood-name{
+    font-size: 45px;
+    margin: 10px;
+}
+.hood-nav-venue{
+    margin-left:425px;
+    width:100%;
+    height: 35px;
+    background-color:black;
+}
+.venue-footer{
+    text-align: center;
+    width:100%;
+    height: 35px;
+    background-color:black;
+    
+}
