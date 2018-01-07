@@ -187,6 +187,31 @@ $(document).ready(function(){
 	};
 
 	featureVenues();
+// venue specific page 
+	function venueList(){
+		var hoodName = localStorage.getItem("name");
+		console.log("hoodName: "+hoodName);
+		$("#hoodVenues").append("<ul class='places'>");
+		for(f=0; f < venues.length; f++){
+			if(venues[f].neighborhood == hoodName){
+				var vName =venues[f].name;
+				$(".places").append("<li class='place'>"+vName+"</li>");
+			}
+		}
+	};
+	
+	$(".hoods").on("click",function(){
+		var name = $(this).attr("data");
+		localStorage.clear();
+		localStorage.setItem("name",name);
+		console.log(localStorage.getItem("name"));
+		$("#hoodName").text(localStorage.getItem("name"));
+		$("#hoodVenues").empty();
+		venueList();
+	});
+	$("#hoodName").text(localStorage.getItem("name"));
+
 	
 
+	// venueList();
 })

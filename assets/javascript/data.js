@@ -81,7 +81,7 @@ var venues = [
 	},
 	{
 	name:"Majestic Theatre",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:["street", "lot", "valet"],
 	tixCost:4,
 	drinkCost:3,
@@ -91,7 +91,7 @@ var venues = [
 	},
 	{
 	name:"Panopticon",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:"",
 	tixCost:"",
 	drinkCost:"",
@@ -101,7 +101,7 @@ var venues = [
 	},
 	{
 	name:"City Tavern",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:"street",
 	tixCost:1,
 	drinkCost:2,
@@ -111,7 +111,7 @@ var venues = [
 	},
 	{
 	name:"House of Blues",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:["street", "lot", "valet"],
 	tixCost:4,
 	drinkCost:3,
@@ -121,7 +121,7 @@ var venues = [
 	},
 	{
 	name:"Rustic",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:["lot,valet"],
 	tixCost:3,
 	drinkCost:3,
@@ -131,7 +131,7 @@ var venues = [
 	},
 	{
 	name:"Foundry",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:"lot",
 	tixCost:3,
 	drinkCost:2,
@@ -141,7 +141,7 @@ var venues = [
 	},
 	{
 	name:"Stereo Live",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:["Lot, valet"],
 	tixCost:4,
 	drinkCost:3,
@@ -151,7 +151,7 @@ var venues = [
 	},
 	{
 	name:"Gas Monkey",
-	neighborhood:"Downtown & Uptown",
+	neighborhood:"Downtown and Uptown",
 	parking:["valet","lot"],
 	tixCost:3,
 	drinkCost:3,

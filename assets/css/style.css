@@ -44,8 +44,8 @@ body{
 
 /*front page*/
 .sections{
-	/*display: -webkit-flex;*/
-	/*height: 500px;*/
+	height: 33.5em;
+	margin-top: 0;
 }
 .myNav{
 	background-color: #000;
@@ -58,11 +58,9 @@ body{
 }
 #headerDiv{
     margin-top: -3rem;
-    height: 650px;
     background: url(../images/topImage.jpg) no-repeat right bottom
 }
 #headerText{
-	/*position: absolute;*/
 	left: 0;
 	height: 100%;
 	width: 45%;
@@ -81,22 +79,18 @@ body{
 #titleLive{
 	line-height: 8rem;
 }
-#subTitle{
-	margin-left: 10px;
-	font-size: 2.7rem;
+.subTitle{
+	/*margin:5em 2em;
+*/	font-size: 7rem;
 }
-#showTitle{
-	/*position: absolute;*/
+/*.subTitle{
     top: 5rem;
     font-size: 7rem;
     left: 20rem;
-}
+}*/
 #featured-shows{
-	/*position: relative;*/
-	
-	width: 95%;
-	margin:5em auto;
-	/*display: inline-block;*/
+	/*width: 95%;
+	margin:5em auto;*/
 }
 .showDiv{
     color: #fff;
@@ -136,7 +130,10 @@ body{
 .date{
 
 }
-=======
+.hoods{
+	color: #fff;
+	/*font-size: 3em;*/
+}
 
 
 /*User Page*/
@@ -151,8 +148,8 @@ h1{
 
 .container-fluid{
     background-color: black;
-    width:100%;
-    height: 100%;
+    /*width:100%;
+    height: 100%;*/
 }
 .object{
     height:80%;
@@ -287,9 +284,9 @@ h1{
     margin: 10px;
 }
 .hood-nav-venue{
-    margin-left:425px;
-    width:100%;
-    height: 35px;
+    /*margin-left:425px;*/
+    /*width:100%;*/
+    /*height: 35px;*/
     background-color:black;
 }
 .venue-footer{
