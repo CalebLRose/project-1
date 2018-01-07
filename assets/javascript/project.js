@@ -120,7 +120,7 @@ $(document).ready(function(){
 
 	// SONG KICK API
 	function showsAPI(){
-		var queryURL = "http://api.songkick.com/api/3.0/metro_areas/35129/calendar.json?apikey=ENjLM092JqaXsW2i";
+		var queryURL = "https://api.songkick.com/api/3.0/metro_areas/35129/calendar.json?apikey=ENjLM092JqaXsW2i";
 	
 		$.ajax({
 			url: queryURL,
