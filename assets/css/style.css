@@ -41,6 +41,10 @@ body{
 	color: #383838;
 	font-size: 1.2rem;
 }
+.sections{
+	/*display: -webkit-flex;*/
+	/*height: 500px;*/
+}
 .myNav{
 	background-color: #000;
 	height: 80px;
@@ -51,12 +55,12 @@ body{
 	widows: 31px;
 }
 #headerDiv{
-	height: 650px;
-	position: relative;
-	background: url(../images/topImage.jpg) no-repeat right bottom;
+    margin-top: -3rem;
+    height: 650px;
+    background: url(../images/topImage.jpg) no-repeat right bottom
 }
 #headerText{
-	position: absolute;
+	/*position: absolute;*/
 	left: 0;
 	height: 100%;
 	width: 45%;
@@ -71,7 +75,6 @@ body{
 	color: #fff;
 	font-size: 10rem;
 	letter-spacing: .5rem;
-
 }
 #titleLive{
 	line-height: 8rem;
@@ -79,4 +82,55 @@ body{
 #subTitle{
 	margin-left: 10px;
 	font-size: 2.7rem;
+}
+#showTitle{
+	/*position: absolute;*/
+    top: 5rem;
+    font-size: 7rem;
+    left: 20rem;
+}
+#featured-shows{
+	/*position: relative;*/
+	
+	width: 95%;
+	margin:5em auto;
+	/*display: inline-block;*/
+}
+.showDiv{
+    color: #fff;
+    display: inline-block;
+    width: 20%;
+    height: 70%;
+    font-family: "DINNextW01-CondensedReg";
+    font-size: 2rem;
+    margin: 0rem 1em;
+}
+/*#hood0{
+	top: 7em;
+	left: 0em;
+}
+#hood1{
+	top: 7em;
+	left: 7em;
+}
+#hood2{
+	top: 7em;
+	left: 15em;
+}
+#hood3{
+	top: 7em;
+	left: 22em;
+}*/
+.headliner{
+	font-size:3.8rem; 
+}
+.support{
+	font-size:2rem; 
+	color: #2b8ba3;
+}
+.ven{
+
+}
+.date{
+
 }

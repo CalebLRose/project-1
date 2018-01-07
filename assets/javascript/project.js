@@ -14,6 +14,16 @@ $(document).ready(function(){
 	var user = firebase.auth().currentUser;
 	var userEmail;
 	var userPswrd;
+	var venueID;
+	var hoods=["Deep Ellum","Downtown & Uptown","South Dallas","East Dallas"];
+	var featVen;
+	var showMaster=[];
+	var featShowDiv;
+	var headliner;
+	var support = [];
+	var t = 0;
+	var venueName;
+	var date;
 
 	// CHECKS TO SEE IF A USER is signed in
 	firebase.auth().onAuthStateChanged(function(user){
@@ -108,22 +118,75 @@ $(document).ready(function(){
 		});
   	});
 
-
 	// SONG KICK API
-	function shows(){
-		var id = "498771";
-		var queryURL = "http://api.songkick.com/api/3.0/venues/"+id+".json?apikey=ENjLM092JqaXsW2i";
+	function showsAPI(){
+		var queryURL = "http://api.songkick.com/api/3.0/metro_areas/35129/calendar.json?apikey=ENjLM092JqaXsW2i";
 	
 		$.ajax({
 			url: queryURL,
 			method: "GET"
 		})
 	.done(function(response){
-		console.log(response);
-	})
+		showMaster=response;
+		console.log(showMaster);
+	});
 	};
 
-	shows();
+	function venueAPI(){
+		var queryURL = "http://api.songkick.com/api/3.0/venues/"+venueID+"/calendar.json?apikey=ENjLM092JqaXsW2i";
+	
+		$.ajax({
+			url: queryURL,
+			method: "GET"
+		})
+	.done(function(response){
+		// console.log(response);
+		if(response.resultsPage.totalEntries == 0){
+			y = Math.floor(Math.random() * featVen.length);
+			venueID = featVen[y].id;
+			venueAPI();
+		} else {
+			var j = Math.floor(Math.random()*response.resultsPage.results.event.length);
+			console.log(response.resultsPage.results.event[j]);
+			var featShow = response.resultsPage.results.event[j];
+			headliner = featShow.performance[0].displayName;
+			console.log("headliner: "+headliner);
+			featShowDiv = $("<div class='showDiv' id='hood"+t+"'>");
+			featShowDiv.append("<h1 class='headliner'>"+headliner+"</h1>");
+			if(featShow.performance.length > 1){
+				for (var a = 1; a<featShow.performance.length; a++) {
+					support.push(" "+featShow.performance[a].displayName);
+				};
+				console.log("support: "+support);
+				featShowDiv.append("<h3 class='support'>with "+support+"</h3>");
+			};
+			venueName = featShow.venue.displayName;
+			console.log("Venue: "+venueName);
+			featShowDiv.append("<h3 class='ven'>"+venueName+"</h3>");
+			date = moment(featShow.start.date).format("MMM D");
+			featShowDiv.append("<h3 class='date'>"+date+"</h3>");
+			t++;
+			console.log("t: "+t);
+			$("#featured-shows").append(featShowDiv);
+		}
+	});
+	};
 
+	// front page featured events
+	function featureVenues(){
+		for (i=0;i<hoods.length;i++){
+			if (venues.neighborhood = hoods[i]){
+				featVen = venues;
+				var x = Math.floor(Math.random() * featVen.length);
+				console.log("x: "+x);
+				venueID = featVen[x].id;
+				console.log("featured venue "+venueID);
+				venueAPI();
+			};
+		};
+	};
+
+	featureVenues();
+	
 
 })
