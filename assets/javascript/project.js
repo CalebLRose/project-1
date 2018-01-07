@@ -133,7 +133,7 @@ $(document).ready(function(){
 	};
 
 	function venueAPI(){
-		var queryURL = "http://api.songkick.com/api/3.0/venues/"+venueID+"/calendar.json?apikey=ENjLM092JqaXsW2i";
+		var queryURL = "https://api.songkick.com/api/3.0/venues/"+venueID+"/calendar.json?apikey=ENjLM092JqaXsW2i";
 	
 		$.ajax({
 			url: queryURL,
