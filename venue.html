@@ -26,16 +26,16 @@
 
 </head>
 <body>
-	<div class="container-fluid">
+	<!-- <div class="container-fluid">
 	
-		<div class="row">
+		<div class="row"> -->
 	<!-- NAVBAR -->
-			<nav class="navbar navbar-expand-lg fixed-top myNav">
+			<nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg fixed-top myNav">
 				<a class="navbar-brand nav-link" href="index.html"><img class="speakerIcon" src="assets/images/speaker.png"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expand="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<div class="collapse navbar-collapse bg-dark" id="navbarNavDropdown">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 						<li class="nav-item">
 							<a class="nav-link text-white" id="userNav" href="user.html" style="display: none"></a>
@@ -45,8 +45,8 @@
 						</li>
 						<li class="nav-item">
 							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" id="neighborhoodMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Neighborhoods</button>
-								<div class="dropdown-menu hood-nav-venue" aria-labelledby="dropdownMenuButton">
+								<button class="nav-link text-secondary bg-dark dropdown-toggle" type="button" id="neighborhoodMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Neighborhoods</button>
+								<div class="dropdown-menu hood-nav-venue bg-dark" aria-labelledby="dropdownMenuButton">
 									<ul class="nav">
 					  					<li class="nav-item">
 					    					<a class="dropdown-item hoods" data="Deep Ellum" href="#">Deep Ellum</a>
@@ -106,7 +106,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-sm btn-outline-light nav-item my-2 my-sm-0" data-toggle="modal" data-target="#createAcctModal" data-dismiss="modal" id="createLinkBtn">Create an Account</button>
+							<button type="button" class="btn btn-sm btn-default nav-item my-2 my-sm-0" data-toggle="modal" data-target="#createAcctModal" data-dismiss="modal" id="createLinkBtn">Create an Account</button>
 							<button type="submit" class="btn btn-default" data-dismiss="modal" id="signInBtn">Sign In</button>
 						</div>
 					</div>
@@ -144,25 +144,32 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
+		<!-- </div> -->
+
+
+		<div class="container-fluid">
 			<div id="venue-top-pic">
 				<div id="venue-top-block">
-				<div id="title">
-					<h1 id="hoodName"></h1>
-				</div>
+					<div id="title">
+						<h1 id="hoodName"></h1>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row"> 
+		<div class="container-fluid sections"> 
 			<div class="venue-neighborhood">
 				<h1 id="hood-name">Venues</h1>
 				<div id="hoodVenues"></div>
 			</div>
 		</div>
+		<div class="container-fluid sections" id="venueCalendar">
+			<button type="button" class="btn btn-outline-light" id="calendarDismiss" aria-hidden="true">&times;</button>
+			<div id="venInfo">
+			</div>
+		</div>
 
-		<div class="venue-footer">
+		<!-- <div class="venue-footer">
 			<ul class="nav justify-content-center">
 				<li class="nav-item">
 					<a class="nav-link active" href="../project-1/index.html">Home</a>
@@ -174,9 +181,9 @@
 					    <a class="nav-link" href="../project-1/venue.html">Hoods</a>
 					  </li>
 			</ul>
-		</div>
+		</div> -->
 
-	</div>
+	<!-- </div> -->
 
 </body>
 </html>

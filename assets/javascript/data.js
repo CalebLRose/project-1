@@ -30,35 +30,35 @@ var venues = [
 	id:"103402",
 	},
 	{
-	name:"Balcony Club",
-	neighborhood:"East Dallas",
-	parking:"lot",
-	tixCost:2,
-	drinkCost:3,
-	cleanliness:"clean",
-	extraInfo:"Older crowd, good for a date",
-	id:"314721",
+	// name:"Balcony Club",
+	// neighborhood:"East Dallas",
+	// parking:"lot",
+	// tixCost:2,
+	// drinkCost:3,
+	// cleanliness:"clean",
+	// extraInfo:"Older crowd, good for a date",
+	// id:"314721",
 	},
-	{
-	name:"Single Wide",
-	neighborhood:"East Dallas",
-	parking:["street", "lot", "valet"],
-	tixCost:1,
-	drinkCost:1,
-	cleanliness:"dive bar clean",
-	extraInfo: 'Try one of the Mamas Mixes',
-	id:"1552943"
-	},
-	{
-	name:"The Goat",
-	neighborhood:"East Dallas",
-	parking:"lot",
-	tixCost:1,
-	drinkCost:2,
-	cleanliness:"not very",
-	extraInfo:"Good for blues",
-	id:"1203686",
-	},
+	// {
+	// name:"Single Wide",
+	// neighborhood:"East Dallas",
+	// parking:["street", "lot", "valet"],
+	// tixCost:1,
+	// drinkCost:1,
+	// cleanliness:"dive bar clean",
+	// extraInfo: 'Try one of the Mamas Mixes',
+	// id:"1552943"
+	// },
+	// {
+	// name:"The Goat",
+	// neighborhood:"East Dallas",
+	// parking:"lot",
+	// tixCost:1,
+	// drinkCost:2,
+	// cleanliness:"not very",
+	// extraInfo:"Good for blues",
+	// id:"1203686",
+	// },
 	{
 	name:"Post Time",
 	neighborhood:"East Dallas",
@@ -209,16 +209,16 @@ var venues = [
 	extraInfo:"Great sound system",
 	id:"3622809"
 	},
- 	{
-	name:"Sons of Herman Hall",
-	neighborhood:"Deep Ellum",
-	parking:"Street",
-	tixCost:3,
-	drinkCost:2,
-	cleanliness:"clean",
-	extraInfo:"A Dallas treasure",
-	id:"1988459"
- 	},
+ // 	{
+	// name:"Sons of Herman Hall",
+	// neighborhood:"Deep Ellum",
+	// parking:"Street",
+	// tixCost:3,
+	// drinkCost:2,
+	// cleanliness:"clean",
+	// extraInfo:"A Dallas treasure",
+	// id:"1988459"
+ // 	},
  	{
 	name:"Double Wide",
 	neighborhood:"Deep Ellum",
@@ -289,16 +289,16 @@ var venues = [
 	extraInfo:"The Church on Sundays",
 	id:"18"
  	},
- 	{
-	name:"The Loft",
-	neighborhood:"South Dallas",
-	parking:["Street","Lot"],
-	tixCost:3,
-	drinkCost:2,
-	cleanliness:"Clean",
-	extraInfo:"Large Venue",
-	id:"10490"
- 	},
+ // 	{
+	// name:"The Loft",
+	// neighborhood:"South Dallas",
+	// parking:["Street","Lot"],
+	// tixCost:3,
+	// drinkCost:2,
+	// cleanliness:"Clean",
+	// extraInfo:"Large Venue",
+	// id:"10490"
+ // 	},
  	{
 	name:"South Side Ballroom",
 	neighborhood:"South Dallas",
@@ -339,16 +339,16 @@ var venues = [
 	extraInfo:"",
 	id:"2547944"
  	},
- 	{
-	name:"Small Brewpub",
-	neighborhood:"South Dallas",
-	parking:["Street","Lot"],
-	tixCost:2,
-	drinkCost:2,
-	cleanliness:"Clean",
-	extraInfo:"Great Old-Fashions",
-	id:"2907268"
-	},
+ // 	{
+	// name:"Small Brewpub",
+	// neighborhood:"South Dallas",
+	// parking:["Street","Lot"],
+	// tixCost:2,
+	// drinkCost:2,
+	// cleanliness:"Clean",
+	// extraInfo:"Great Old-Fashions",
+	// id:"2907268"
+	// },
  	{
 	name:"The Texas Theater",
 	neighborhood:"South Dallas",

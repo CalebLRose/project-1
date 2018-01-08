@@ -15,15 +15,18 @@ $(document).ready(function(){
 	var userEmail;
 	var userPswrd;
 	var venueID;
-	var hoods=["Deep Ellum","Downtown & Uptown","South Dallas","East Dallas"];
+	var hoods=["Deep Ellum","Downtown & Uptown","South Dallas","East Dallas"]
 	var featVen;
-	var showMaster=[];
-	var featShowDiv;
-	var headliner;
-	var support = [];
-	var t = 0;
+	var featShow = [];
 	var venueName;
-	var date;
+	var showDate;
+	var headliner;
+	var support=[];
+	var index = [];
+	var featShowDiv;
+	var t = 0;
+	var eventArray=[];
+	
 
 	// CHECKS TO SEE IF A USER is signed in
 	firebase.auth().onAuthStateChanged(function(user){
@@ -119,19 +122,6 @@ $(document).ready(function(){
   	});
 
 	// SONG KICK API
-	function showsAPI(){
-		var queryURL = "https://api.songkick.com/api/3.0/metro_areas/35129/calendar.json?apikey=ENjLM092JqaXsW2i";
-	
-		$.ajax({
-			url: queryURL,
-			method: "GET"
-		})
-	.done(function(response){
-		showMaster=response;
-		console.log(showMaster);
-	});
-	};
-
 	function venueAPI(){
 		var queryURL = "https://api.songkick.com/api/3.0/venues/"+venueID+"/calendar.json?apikey=ENjLM092JqaXsW2i";
 	
@@ -187,6 +177,7 @@ $(document).ready(function(){
 	};
 
 	featureVenues();
+	
 // venue specific page 
 	function venueList(){
 		var hoodName = localStorage.getItem("name");
@@ -195,23 +186,86 @@ $(document).ready(function(){
 		for(f=0; f < venues.length; f++){
 			if(venues[f].neighborhood == hoodName){
 				var vName =venues[f].name;
-				$(".places").append("<li class='place'>"+vName+"</li>");
+				var vID = venues[f].id;
+				$(".places").append("<li><a class='vens' data='"+vID+"' href='#venueCalendar'>"+vName+"</a></li>");
 			}
-		}
+		};
+
 	};
 	
 	$(".hoods").on("click",function(){
 		var name = $(this).attr("data");
-		localStorage.clear();
+		localStorage.removeItem("name");
 		localStorage.setItem("name",name);
 		console.log(localStorage.getItem("name"));
 		$("#hoodName").text(localStorage.getItem("name"));
 		$("#hoodVenues").empty();
 		venueList();
 	});
-	$("#hoodName").text(localStorage.getItem("name"));
 
+	$(document).on("click",".vens",function(){
+		$("#venueCalendar").css("display","block");
+		var thisID = $(this).attr("data");
+		var thisVenue;
+		for (var w = 0; w < venues.length; w++) {
+			if (venues[w].id==thisID){
+				thisVenue=venues[w]
+			}
+		};
+		var calendarURL = "https://api.songkick.com/api/3.0/venues/"+thisID+"/calendar.json?apikey=ENjLM092JqaXsW2i";
 	
+		$.ajax({
+			url: calendarURL,
+			method: "GET"
+		})
+		.done(function(response){
+			// console.log(response);
+			for (var c = 0; c <5;c++){
+				if(response == undefined){
+					break;
+				} else {
+					var calendarMaster = response.resultsPage.results.event[c];
+					var calSup=[];
+					var calDate;
+					var calendar = $("<div class='calDiv' id='entry"+c+"'>");
+					
+					var calHead = calendarMaster.performance[0].artist.displayName;
+					calendar.append("<h3 class='star'>"+calHead+"</h3>");
+					if(calendarMaster.performance.length > 1){
+							for (var w = 1; w<calendarMaster.performance.length; w++) {
+								calSup.push(" "+calendarMaster.performance[w].displayName);
+							};
+						console.log("support: "+calSup);
+						calendar.append("<h3 class='perfs'>with "+calSup+"</h3>");
+						}
+					// console.log(calendarMaster);
+					calDat = moment(calendarMaster.start.date).format("MMM D");
+					calendar.append("<h3 class='date'>"+calDat+"</h3>");
+					var calVen = thisVenue.name;
+					// console.log(calVen);
+					var addBtn = $("<button type='button' class='btn btn-light btn-sm addBtn' data-button='{venue:'"+calVen+"',headliner:'"+calHead+"',date:'"+calDat+"',support:'"+calSup+"'}"+"></button");
+					// addBtn.data("data-button={venue:'"+calVen+"',headliner:'"+calHead+"',date:'"+calDat+"',support:'"+calSup+"'}");
+					addBtn.text("+");
+					calendar.append(addBtn);
+					$("#venInfo").append(calendar);
+					// calDiv.css("display","inline-block");
+				};
+			}
+		});
+		$("#venInfo").empty();
+		console.log(thisVenue);
+		$("#venInfo").prepend("<h1 class='thisVenName'>"+thisVenue.name+"</h1>");
+	});
 
-	// venueList();
+	$("#calendarDismiss").on("click",function(){
+		$("#venueCalendar").css("display","none")
+	})
+
+	$("#hoodName").text(localStorage.getItem("name"));
+	venueList();
+
+
+$(document).on("click",".addBtn",function(){
+	console.log(this);
+	});
 })

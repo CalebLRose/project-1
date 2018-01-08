@@ -44,13 +44,17 @@ body{
 
 /*front page*/
 .sections{
+	position: relative;
 	height: 33.5em;
 	margin-top: 0;
 }
 .myNav{
-	background-color: #000;
 	height: 80px;
-	opacity: .8;
+}
+.headings{
+	margin: 100px 10px 0px;
+    font-size: 132px;
+
 }
 .speakerIcon{
 	height: 30px;
@@ -60,15 +64,19 @@ body{
     margin-top: -3rem;
     background: url(../images/topImage.jpg) no-repeat right bottom
 }
-#headerText{
+.headerText{
+	position: absolute;
 	left: 0;
 	height: 100%;
 	width: 45%;
 	background-color: #2b8ba3;
 	z-index: 2;
 }
+#subTitle{
+	font-size: 36px;
+}
 #textDiv{
-	margin:130px 50px;
+	margin: 175px 12px;
 }
 .title{
 	font-family:"DINNextW01-CondensedReg";
@@ -79,44 +87,45 @@ body{
 #titleLive{
 	line-height: 8rem;
 }
-.subTitle{
-	/*margin:5em 2em;
-*/	font-size: 7rem;
+#aboutUs{
+    margin: 15px 0px 0px;
+    font-size: 120px;
+    color:#2b8ba3;
 }
-/*.subTitle{
-    top: 5rem;
-    font-size: 7rem;
-    left: 20rem;
-}*/
+#blurb{
+    top: 0px;
+    font-size: 56px;
+    left: 12px;
+    color: #fff;
+}
 #featured-shows{
+	position: relative;
 	/*width: 95%;
 	margin:5em auto;*/
 }
 .showDiv{
+	position: absolute;
     color: #fff;
     display: inline-block;
-    width: 20%;
+    width: 25%;
     height: 70%;
     font-family: "DINNextW01-CondensedReg";
     font-size: 2rem;
-    margin: 0rem 1em;
+    padding: 20px;
+    top: 150px
 }
-/*#hood0{
-	top: 7em;
-	left: 0em;
+#hood0{
+	left: 12px;
 }
 #hood1{
-	top: 7em;
-	left: 7em;
+	left: 290px;
 }
 #hood2{
-	top: 7em;
-	left: 15em;
+	left: 550px;
 }
 #hood3{
-	top: 7em;
-	left: 22em;
-}*/
+	left: 833px;	
+}
 .headliner{
 	font-size:3.8rem; 
 }
@@ -132,7 +141,9 @@ body{
 }
 .hoods{
 	color: #fff;
-	/*font-size: 3em;*/
+    display: block;
+    font-size: 70px;
+    padding: 19px 10px 0px;
 }
 
 
@@ -147,8 +158,8 @@ h1{
 
 
 .container-fluid{
-    background-color: black;
-    /*width:100%;
+    /*background-color: black;*/
+   /* width:100%;
     height: 100%;*/
 }
 .object{
@@ -251,10 +262,10 @@ h1{
 
 #venue-top-block{
     padding-top:75px;
-    margin-left: 10px;
+    /*margin-left: 10px;
     width:400px;
     height: 400px;
-    background-color:#2b8ba3; 
+    background-color:#2b8ba3;*/ 
 }
 
 #venue-type{
@@ -265,34 +276,60 @@ h1{
 
 
 .venue-neighborhood{
-    text-align: center;
+    /*text-align: center;*/
     margin:10px;
     width: 100%;
     height: 500px;
     color:white;
-    background-color: #383838;
+    background-color: #2b8ba3;
 
 }
 
 .col-md-3{
     margin:10px;
-    text-align: center;
+    /*text-align: center;*/
     display: inline-block;
 }
 #hood-name{
-    font-size: 45px;
+    font-size: 75px;
     margin: 10px;
 }
 .hood-nav-venue{
-    /*margin-left:425px;*/
-    /*width:100%;*/
-    /*height: 35px;*/
+    margin-left:425px;
+    width:100%;
+    height: 35px;
     background-color:black;
 }
+.vens{
+	color: #383838;
+	font-size: 34px;
+}
+#venueCalendar{
+	display: none;
+}
 .venue-footer{
-    text-align: center;
+    /*text-align: center;*/
     width:100%;
     height: 35px;
     background-color:black;
     
+}
+#neighborhoodMenuButton{
+	border: none;
+}
+.calDiv{
+	padding-top: 70px;
+}
+.star{
+	color: #2b8ba3;
+	font-size: 40px;
+}
+.perfs,.date{
+	color: #fff;
+}
+.perfs{
+	font-size: 28px;
+}
+.date{
+	font-size: 24px;
 }
